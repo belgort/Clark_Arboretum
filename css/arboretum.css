@@ -1,0 +1,937 @@
+/* CLARK ARBORETUM CSS DOCUMENT */
+html, body, div, header, footer, nav, h1, h2, h3, p, a {
+     padding: 0;
+     margin: 0;
+}
+
+html {
+     width: 100%;
+     height: 100%;
+}
+
+body {
+     font-family: Cambria, Arial, sans-serif;
+     background: url('../img/cloth-tile.jpg');
+     width:100%;
+     height: 100%;
+}
+
+.cf:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+
+.no-js {
+     height: 400px;
+     width: 600px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-top: -200px;
+     margin-left: -300px;
+     border: 5px solid #F00;
+     background: #EEE;
+     text-align: center;
+}
+
+.no-js-content {
+     color: #900;
+     padding: 100px 25px;
+     
+}
+
+.no-js-content > h1 {
+     margin-bottom: 15px;
+}
+
+.no-js-content > h3 {
+     font-family: sans-serif;
+}
+
+#mobile-menu {
+     display: none;
+}
+
+#copyright {
+     cursor: pointer;
+}
+
+/*********************/
+/* HEADER AND FOOTER */
+/******************************************************************************/
+header {
+     position: absolute;
+     width: 100%;
+     height: 77px;
+     z-index: 10;
+     background: #43342A;
+}
+
+#header-background {
+     position: absolute;
+     z-index: -1;
+     left: 50%;
+     margin-left: -640px;
+     pointer-events: none;
+}
+
+header > h1 {
+     position: absolute;
+     left: 50%;
+     margin-left: -400px;
+     margin-top: 25px;
+     color: #FFF;
+     font-family: 'Goudy Bookletter 1911', sans-serif;
+     font-weight: normal;
+     font-size: 1.3em;
+     letter-spacing: 3px;
+}
+
+.title-a {
+     font-family: Cambria, Georgia, Paltino, 'Times New Roman', serif;
+     font-style: italic;
+     color: #afc84f;
+}
+
+#menu-show-hide {
+     display: none;
+     color: #FFF;
+     font-size: 0.7em;
+     float: right;
+     margin: 10px;
+}
+
+footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     z-index: 9;
+     height: 41px;
+     background: url('../img/footer.png') center bottom no-repeat;
+     text-align: center;
+}
+
+footer > p {
+     color: #FFF;
+     padding-top: 15px;
+     font-size: 0.8em;
+}
+
+#footer-stripe {
+     position: absolute;
+     bottom: 0;
+     z-index: 8;
+     height: 35px;
+     width: 100%;
+     background: #43342A;
+}
+
+nav {
+     position: absolute;
+     right: 0;
+     top: 0;
+     margin-right: 15px;
+}
+
+#main-menu {
+     display: inline-block;
+     margin-right: 35px;
+     margin-top: 25px;
+}
+
+#main-menu > li {
+     display: inline-block;
+}
+
+#main-menu > li > a {
+     display:block;
+     text-decoration: none;
+     color: #FFF;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     font-size: 0.7em;
+     font-weight: bold;
+     letter-spacing:2.5px;
+}
+
+#main-menu > li > a:hover {
+     background-color: #634F42;
+     border-bottom: 2px dotted #DDD;
+}
+
+.menu-about {
+     padding: 10px 10px 10px 37px;
+     background: url('../img/leaf.png') 10px 50% no-repeat;
+}
+
+.menu-help {
+     padding: 10px 10px 10px 35px;
+     background: url('../img/quest.png') 10px 50% no-repeat;
+}
+
+.menu-college {
+     padding: 10px 10px 10px 35px;
+     background: url('../img/penguin.png') 10px 50% no-repeat;
+}
+
+#mobile-menu {
+     display: none;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     clear: both;     
+}
+
+#mobile-menu > li {
+     width: 100%;
+     background: #EA6D55;
+     margin-bottom: 5px;
+     text-align: center; 
+}
+
+#mobile-menu > li:first-child {
+     margin-top: 3px;
+}
+
+#mobile-menu > li:last-child {
+     margin-bottom: 0;
+}
+
+#mobile-menu > li > a {
+     display: block;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     text-decoration: none;
+     color: #FFF;
+     font-size: 0.8em;
+     letter-spacing:2.5px;
+     padding: 10px 0;
+}
+/* END HEADER AND FOOTER ******************************************************/
+
+
+/********************/
+/* FLOATING BUTTONS */
+/******************************************************************************/
+
+#search-trees {
+     position: absolute;
+     z-index: 8;
+     top: 50%;
+     margin-left: -92px;
+     background: #EA6D55;
+     cursor: pointer;
+     -webkit-transform: rotate(-90deg);
+     -moz-transform:    rotate(-90deg);
+     -ms-transform:     rotate(-90deg);
+     -o-transform:      rotate(-90deg);
+     transform:         rotate(-90deg);
+     box-shadow: 0 0 5px #666;
+}
+
+#search-trees > p {
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     color: #FFF;
+     padding: 15px;
+     letter-spacing: 2px;
+     display: inline-block;
+}
+
+#search-triangle {
+     background: rgba(255,255,255,0.3);
+}
+
+.on-map-buttons {
+     position: absolute;
+     right: 0;
+     top: 75%;
+     z-index: 7;
+}
+
+.on-map-buttons > p {
+     padding: 15px 25px 15px 70px;
+     font-family: sans-serif;
+     cursor: pointer;
+     color: #EA6D55;
+     font-weight: bold;
+     font-size: 0.9em;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     letter-spacing: 1.5px;
+}
+
+.on-map-buttons > p > a {
+     text-decoration: none;
+     color: #EA6D55;
+     display: block;
+}
+
+#find-me {
+     margin-bottom: 15px;
+     background: #FFF url('../img/m-glass.png') 0 50% no-repeat;
+}
+
+#print-map {
+     background: #FFF url('../img/folding-map.png') 0 50% no-repeat;
+}
+/* END HEADER AND FOOTER ******************************************************/
+
+
+/********************/
+/* MAP ZOOM CONTROL */
+/******************************************************************************/
+#map-controls {
+     display: none; /* They are displayed after the intro message is shown */
+     position: absolute;
+     right: 0;
+     margin-right: 50px;
+     margin-top: 127px;
+     z-index: 20;
+     width: 40px;
+     padding: 10px;
+     background: #FFF;
+}
+
+#zoom-scale {
+     padding: 5px 0;
+}
+
+.scale-tick {
+     height: 5px;
+     width: 16px;
+     background: #43342A;
+     margin-left: 12px;
+     margin-bottom: 5px;     
+}
+
+.scale-tick:last-child {
+     margin-bottom: 0;
+}
+
+.active-tick {
+     background: #EA6D55;
+}
+
+#zoom-in, #zoom-out {
+     text-align:center;
+}
+
+#zoom-in > p, #zoom-out > p {
+     font-family: Verdana, sans-serif;
+     color: #FFF;
+     background: #afc84f;
+     cursor: pointer;
+     font-weight: bold;
+     font-size: 1.5em;
+     padding-bottom: 3px;
+}
+
+#zoom-in > p:hover, #zoom-out > p:hover {
+     color: #EA6D55;
+}
+/* END MAP ZOOM CONTROL *******************************************************/
+
+
+/*********************/
+/* INTRO/WELCOME BOX */
+/******************************************************************************/
+
+#intro-box {
+     display: none;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     margin-top: 175px;
+     margin-left: -300px;
+     width: 600px;
+     z-index: 1000;
+}
+
+.intro-content {
+     background: rgba(234,109,85,0.8);
+     padding: 25px 30px 30px 30px;
+     font-family: Cambria, Georgia, Paltino, 'Times New Roman', serif;
+     letter-spacing:1px;  
+     color: #EEE; 
+}
+
+.intro-content > h2 {
+    font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+    letter-spacing: 2.5px;
+}
+
+.intro-content > p {
+     margin-top: 10px;
+}
+
+#map-loading {
+     background: rgba(255,255,255,0.3);
+     text-align: center;
+     margin-bottom: 15px;
+     padding: 5px 0;
+}
+/* END INTRO/WELCOME BOX CSS **************************************************/
+
+
+/**************************/
+/* GENERAL POP UP BOX CSS */
+/******************************************************************************/
+
+.pop-up-box {
+     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.close-item, #close-intro-message {
+     float: right;
+     cursor: pointer;
+}
+
+.coral-title-stripe {
+     height: 34px;
+     background: rgba(234,109,85,0.6);
+}
+
+.teal-title-stripe {
+     height: 34px;
+     background: rgba(34,161,147, 0.6);
+}
+
+.clear-title-stripe {
+     height: 34px;
+     background: rgba(255,255,255,0.15);
+}
+/* END GENERAL POP UP BOX CSS *************************************************/
+
+
+/******************/
+/* SEARCH BOX CSS */
+/******************************************************************************/
+#search-box {
+     display: none;
+     position: absolute;
+     width: 80%;
+     height: 80%;
+     top: 10%;
+     left: 10%;
+     z-index: 100;
+     overflow:auto;
+     background: rgba(234,109,85,0.9);
+}
+
+.show-trails > h3, .map-options > h3, .search-by-type > h3, .search-content > h3 {
+     padding: 5px 0 0 15px;
+     color: #43342A;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     font-size: 1em;
+}
+
+.show-trails > h3, .map-options > h3 {
+
+}
+
+.option-on {
+     background: rgba(255,255,255,0.3);
+}
+
+.search-by-type {
+     padding: 15px 0;
+}
+
+.alphabet-search {
+     display: none;
+}
+
+.alphabet-search > a {
+     display: inline-block;
+     color: #EEE;
+     text-align: center;
+     width: 20px;
+     padding: 5px;
+     margin: 6px 3px;
+     background: rgba(255,255,255,0.3);
+     text-decoration: none;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+}
+
+#genus-search-title {
+     border-top: 2px solid #EEE;
+     padding: 10px 0 10px 15px;
+}
+
+.alphabet-search > a:hover {
+     background: rgba(255,255,255,0.5);
+     color: #43342A; 
+}
+
+.show-trails {
+     padding-top: 15px;
+}
+
+.map-options {
+     padding-bottom: 15px;
+}
+
+.p-trail, .map-options > h3, .map-options > p, .search-by-type > h3 {
+     display: inline-block;
+}
+
+.p-trail, .type-filter, #show-all {
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+}
+
+.tree-list > p, .tree-list > h3 {
+     padding-left: 15px; 
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;    
+     color: #EEE;
+}
+
+.search-main-titles {
+     font-family: 'Helvetica Neue', Arimo, Arial, sans-serif;
+     color: #EEE;
+     padding: 5px 0;
+     text-align: center;
+     letter-spacing: 2px;
+     background: rgba(255,255,255,0.3);
+}   
+
+.tree-list > p > a, .search-by-type > p > a, .option-button, .p-trail  {   
+     text-decoration: none;
+     color: #EEE;
+     display: block;
+     padding: 3px;
+     font-size: 0.8em;
+}
+
+.tree-list > p > a:hover, .search-by-type > p > a:hover, .option-button:hover, .p-trail:hover {
+     background: rgba(255,255,255,0.3);
+     color: #43342A;
+}
+
+.tree-list > h3, .option-button {
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;     
+}
+
+.type-filter-title {
+     display: inline-block;
+}
+
+.search-by-type > p, .show-trails > p {
+     display: inline-block;
+     margin-left: 10px;
+}
+
+.tree-list {
+     float: left;
+     width: 20%;
+}
+/* END SEARCH BOX CSS *********************************************************/
+
+
+/*********************/
+/* TREE PHOTO POP UP */
+/******************************************************************************/
+#info-box {
+     display: none;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-top: -150px;
+     margin-left: -300px;
+     width: 600px;
+     height: 334px;
+     overflow: hidden;
+     z-index: 101;
+     color: #FFF;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     letter-spacing:2px;   
+}
+
+#tree-info-species, #tree-info-genus {
+     font-family: Cambria, Georgia, Palatino, 'Times New Roman', serif;
+}   
+
+.evergreen-info {
+     background: rgba(34,161,147,0.85);
+}
+
+.deciduous-info {
+     background: rgba(234,109,85,0.85);
+}
+
+#tree-info-content {
+     width: 100%;
+     height: 100%;
+}
+
+#tree-info-image {
+     float: left;
+     height: 250px;
+     padding: 25px;
+}
+
+#tree-info-image > img {     
+     max-height: 100%;
+     width: auto;
+}
+
+.tree-info-info {
+     padding: 25px 25px 25px 0;
+}
+
+#tree-info-title {
+     font-size: 2em;
+}
+
+#tree-info-genus, #tree-info-species {
+     font-weight: normal;
+     font-size: 1.5em;
+     font-style: italic;
+}
+
+#loading-image {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin-top: -32px;
+     margin-left: -32px;
+}
+/* END TREE PHOTO POP UP CSS **************************************************/
+
+
+/****************/
+/* ABOUT POP UP */
+/******************************************************************************/
+.about-content {
+     background: rgba(28,159,146,0.8);
+     padding: 15px 30px 30px 30px;
+     font-family: Cambria, Georgia, Paltino, 'Times New Roman', serif;
+     letter-spacing:1px;  
+     color: #EEE; 
+}
+
+.about-content > h2 {
+    font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+    letter-spacing: 2.5px;
+    padding: 15px 0;
+}
+
+.about-content > p {
+     margin-top: 10px;
+}
+
+#about-box {
+     display: none;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     margin-top: 127px;
+     margin-left: -400px;
+     width: 800px;
+     background: rgba(29,159,146,0.5);
+     z-index: 101;
+}
+
+#image-box > img {
+     max-width: 100%;
+     max-height: 460px;
+}
+/* END POP UP BOX STYLES ******************************************************/
+
+
+/**************/
+/* HELP STUFF */
+/******************************************************************************/
+#help-box {
+     display: none;
+     position: absolute;
+     width: 80%;
+     height: 80%;
+     top: 10%;
+     left: 10%;
+     z-index: 100;
+     overflow: auto;
+     background: rgba(29,159,146,0.5);
+}
+
+.help-content {
+     padding: 10px 25px; 
+     background: rgba(29,159,146,0.8);
+}
+
+.help-content p {
+     color: #EEE;
+     padding-top: 15px;
+     letter-spacing: 1px;
+     font-family: Cambria, Georgia, Paltino, 'Times New Roman', serif;
+}
+
+.help-topic {
+     color: #EEE;
+     font-weight: bold;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     letter-spacing: 2px;
+}
+
+#help-box h3 {
+     font-weight: bold;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     letter-spacing: 1.25px;
+     padding-top: 15px;
+     color: #43342A;  
+}
+
+#help-box h2 {
+     padding-top: 0;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     letter-spacing: 2.5px;
+     color: #EEE;
+     padding: 15px 0;
+}
+
+.how-to-item {
+     float: left;
+     width: 25%;
+}
+
+.how-to-item > .image-holder {
+     padding: 25px;
+}
+
+.how-to-item > .image-holder > img {
+     max-width: 100%;
+}
+
+#mobile-section-title, #desktop-section-title {
+     font-weight: bold;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     color: #43342A; 
+     letter-spacing: 1.5px;
+     text-decoration: none;
+}
+
+#help-box ul > li > ul > li > a {
+     color: #EEE;
+     font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+     text-decoration: none;
+     display: block;
+}
+
+#help-box a:hover {
+     background: rgba(255,255,255,0.3);
+}
+/* END HELP BOX STYLES *******************************************************/
+
+
+/*************/
+/* MAP STUFF */
+/******************************************************************************/
+#map_canvas {
+     position: absolute;
+     z-index: 1;     
+}
+/* END MAP STUFF **************************************************************/
+
+
+/*****************/
+/* MEDIA QUERIES */
+/******************************************************************************/
+@media only screen and (max-width: 768px) {
+     
+     #header-background {
+          display: none;
+     }
+     
+     header {
+          position: fixed;
+          margin-top: 0;
+          height: 34px;
+     }
+     
+     #menu-show-hide {
+          font-family: 'Helvetica Neue Bold', Arimo, Arial, sans-serif;
+          display: inline-block;
+          cursor: pointer;
+          letter-spacing: 2px;
+     }
+     
+     header > h1 {
+          font-size: 0.7em;
+          margin: 10px 0 0 10px;
+          position: fixed;
+          left: 0;
+     }
+     
+     footer {
+          position: fixed;
+          height: 25px;
+          background-position: top center;
+     }
+     
+     #footer-image {
+          display: none;
+     }
+     
+     footer > p {
+          color: #FFF;
+          padding-top: 10px;
+          font-size: 0.5em;
+     }
+     
+     nav {
+          display: none;
+          position: static;
+          background: #43342A;
+          width: 100%;
+     }
+     
+     #main-menu {
+          display: block;
+          padding: 5px 0;
+          margin-top: 0;
+     }
+     
+     #main-menu > li {
+          display: block;
+     }
+     
+     #main-menu > li > a {
+          display:block;
+     }     
+     
+     #print-map {
+          display: none;
+     }
+     
+     #map-controls {
+          margin-right: 25px;
+          margin-top: 63px;
+          width: 40px;
+     }
+     
+     .scale-tick {
+          margin-left: 12px;     
+     }
+     
+     #search-trees {
+          display: none;
+     }          
+     
+     #find-me {
+          display: none;
+     }
+     
+     #about-box, #intro-box {
+          left: 0;
+          margin-top: 0;
+          margin-left: 0;
+          width: 100%;
+          height: 100%;
+     }    
+     
+     .coral-title-stripe {
+          height: 34px;
+          background: rgb(234,109,85);
+     }
+     
+     .teal-title-stripe {
+          height: 34px;
+          background: rgb(34,161,147);
+     }
+     
+     .coral-info-mobile {
+          background: rgba(234,109,85,0.8);
+     }
+     
+     .teal-info-mobile {
+          background: rgba(34,161,147,0.8);
+     }
+     
+     #info-box {
+          top: 0;
+          left: 0;
+          margin-top: 0;
+          margin-left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          text-align: center;  
+     }
+     
+     #tree-info-image {
+          height: 100%;
+          width: 100%;
+          float: none;
+          padding: 0;     
+     }
+     
+     #tree-info-image > img {
+          max-width: 100%;
+     }
+     
+     .tree-info-info {
+          position: absolute;
+          z-index: 10;
+          bottom: 0;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 25px;
+          /*background: rgba(67,52,42,0.8);*/
+          box-shadow: 0 0 5px #000;
+          font-size: 0.5em;     
+     }
+     
+     .tree-list {
+          float: none;
+          width: 100%;
+     }
+     
+     #search-box {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+     }
+     
+     #help-box {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+     }
+     
+     #duplicate-s {
+          display: none;
+     }
+     
+     .clear-title-stripe {
+          background: rgb(234,109,85);    
+     }
+     
+     .search-content {
+           
+     }
+
+     .app-how-to {
+          text-align: center;
+     } 
+
+     .how-to-item {
+          float: none;
+          width: 100%;
+     }
+     
+     .alphabet-search {
+          display: block;
+     }
+     
+     #footer-stripe {
+          display: none;
+     }        
+}
+
+@media only screen and (min-width: 769px) {
+     
+     #mobile-menu {
+          display: none;
+     }
+
+}
+/* END MEDIA QUERIES **********************************************************/

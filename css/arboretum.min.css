@@ -1,0 +1,126 @@
+html,body,div,header,footer,nav,h1,h2,h3,p,a{margin:0;padding:0}
+body{font-family:Cambria, Arial, sans-serif;background:url(../img/cloth-tile.jpg);width:100%;height:100%}
+.cf:after{content:"";display:table;clear:both}
+.no-js{height:400px;width:600px;position:absolute;top:50%;left:50%;margin-top:-200px;margin-left:-300px;border:5px solid red;background:#EEE;text-align:center}
+.no-js-content{color:#900;padding:100px 25px}
+.no-js-content > h1{margin-bottom:15px}
+.no-js-content > h3{font-family:sans-serif}
+#mobile-menu{display:none;list-style:none;clear:both;margin:0;padding:0}
+#copyright{cursor:pointer}
+header{position:absolute;width:100%;height:77px;z-index:10;background:#43342A}
+#header-background{position:absolute;z-index:-1;left:50%;margin-left:-640px;pointer-events:none}
+header > h1{position:absolute;left:50%;margin-left:-400px;margin-top:25px;color:#FFF;font-family:'Goudy Bookletter 1911', sans-serif;font-weight:400;font-size:1.3em;letter-spacing:3px}
+.title-a{font-family:Cambria, Georgia, Paltino, 'Times New Roman', serif;font-style:italic;color:#afc84f}
+#menu-show-hide{display:none;color:#FFF;font-size:.7em;float:right;margin:10px}
+footer{position:absolute;bottom:0;width:100%;z-index:9;height:41px;background:url(../img/footer.png) center bottom no-repeat;text-align:center}
+footer > p{color:#FFF;padding-top:15px;font-size:.8em}
+#footer-stripe{position:absolute;bottom:0;z-index:8;height:35px;width:100%;background:#43342A}
+nav{position:absolute;right:0;top:0;margin-right:15px}
+#main-menu{display:inline-block;margin-right:35px;margin-top:25px}
+#main-menu > li > a{display:block;text-decoration:none;color:#FFF;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;font-size:.7em;font-weight:700;letter-spacing:2.5px}
+#main-menu > li > a:hover{background-color:#634F42;border-bottom:2px dotted #DDD}
+.menu-about{background:url(../img/leaf.png) 10px 50% no-repeat;padding:10px 10px 10px 37px}
+.menu-help{background:url(../img/quest.png) 10px 50% no-repeat;padding:10px 10px 10px 35px}
+.menu-college{background:url(../img/penguin.png) 10px 50% no-repeat;padding:10px 10px 10px 35px}
+#mobile-menu > li{width:100%;background:#EA6D55;margin-bottom:5px;text-align:center}
+#mobile-menu > li:first-child{margin-top:3px}
+#mobile-menu > li > a{display:block;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;text-decoration:none;color:#FFF;font-size:.8em;letter-spacing:2.5px;padding:10px 0}
+#search-trees{position:absolute;z-index:8;top:50%;margin-left:-92px;background:#EA6D55;cursor:pointer;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg);transform:rotate(-90deg);box-shadow:0 0 5px #666}
+#search-trees > p{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;color:#FFF;letter-spacing:2px;display:inline-block;padding:15px}
+.on-map-buttons{position:absolute;right:0;top:75%;z-index:7}
+.on-map-buttons > p{cursor:pointer;color:#EA6D55;font-weight:700;font-size:.9em;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:1.5px;padding:15px 25px 15px 70px}
+.on-map-buttons > p > a{text-decoration:none;color:#EA6D55;display:block}
+#find-me{margin-bottom:15px;background:#FFF url(../img/m-glass.png) 0 50% no-repeat}
+#print-map{background:#FFF url(../img/folding-map.png) 0 50% no-repeat}
+#map-controls{display:none;position:absolute;right:0;margin-right:50px;margin-top:127px;z-index:20;width:40px;background:#FFF;padding:10px}
+#zoom-scale{padding:5px 0}
+.scale-tick{height:5px;width:16px;background:#43342A;margin-left:12px;margin-bottom:5px}
+.active-tick{background:#EA6D55}
+#zoom-in,#zoom-out{text-align:center}
+#zoom-in > p,#zoom-out > p{font-family:Verdana, sans-serif;color:#FFF;background:#afc84f;cursor:pointer;font-weight:700;font-size:1.5em;padding-bottom:3px}
+#zoom-in > p:hover,#zoom-out > p:hover{color:#EA6D55}
+#intro-box{display:none;position:absolute;top:0;left:50%;margin-top:175px;margin-left:-300px;width:600px;z-index:1000}
+.intro-content{background:rgba(234,109,85,0.8);font-family:Cambria, Georgia, Paltino, 'Times New Roman', serif;letter-spacing:1px;color:#EEE;padding:25px 30px 30px}
+.intro-content > h2{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:2.5px}
+#map-loading{background:rgba(255,255,255,0.3);text-align:center;margin-bottom:15px;padding:5px 0}
+.pop-up-box{box-shadow:0 0 10px rgba(0,0,0,0.5)}
+.close-item,#close-intro-message{float:right;cursor:pointer}
+.coral-title-stripe{height:34px;background:rgba(234,109,85,0.6)}
+.teal-title-stripe{height:34px;background:rgba(34,161,147,0.6)}
+.clear-title-stripe{height:34px;background:rgba(255,255,255,0.15)}
+#search-box{display:none;position:absolute;width:80%;height:80%;top:10%;left:10%;z-index:100;overflow:auto;background:rgba(234,109,85,0.9)}
+.show-trails > h3,.map-options > h3,.search-by-type > h3,.search-content > h3{color:#43342A;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;font-size:1em;padding:5px 0 0 15px}
+.search-by-type{padding:15px 0}
+.alphabet-search{display:none}
+.alphabet-search > a{display:inline-block;color:#EEE;text-align:center;width:20px;background:rgba(255,255,255,0.3);text-decoration:none;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;margin:6px 3px;padding:5px}
+#genus-search-title{border-top:2px solid #EEE;padding:10px 0 10px 15px}
+.alphabet-search > a:hover{background:rgba(255,255,255,0.5);color:#43342A}
+.show-trails{padding-top:15px}
+.map-options{padding-bottom:15px}
+.tree-list > p,.tree-list > h3{padding-left:15px;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;color:#EEE}
+.search-main-titles{font-family:'Helvetica Neue', Arimo, Arial, sans-serif;color:#EEE;text-align:center;letter-spacing:2px;background:rgba(255,255,255,0.3);padding:5px 0}
+.tree-list > p > a,.search-by-type > p > a,.option-button,.p-trail{text-decoration:none;color:#EEE;display:block;font-size:.8em;padding:3px}
+.tree-list > p > a:hover,.search-by-type > p > a:hover,.option-button:hover,.p-trail:hover{background:rgba(255,255,255,0.3);color:#43342A}
+.search-by-type > p,.show-trails > p{display:inline-block;margin-left:10px}
+.tree-list{float:left;width:20%}
+#info-box{display:none;position:absolute;top:50%;left:50%;margin-top:-150px;margin-left:-300px;width:600px;height:334px;overflow:hidden;z-index:101;color:#FFF;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:2px}
+#tree-info-species,#tree-info-genus{font-family:Cambria, Georgia, Palatino, 'Times New Roman', serif}
+.evergreen-info{background:rgba(34,161,147,0.85)}
+.deciduous-info{background:rgba(234,109,85,0.85)}
+#tree-info-image{float:left;height:250px;padding:25px}
+#tree-info-image > img{max-height:100%;width:auto}
+.tree-info-info{padding:25px 25px 25px 0}
+#tree-info-title{font-size:2em}
+#tree-info-genus,#tree-info-species{font-weight:400;font-size:1.5em;font-style:italic}
+#loading-image{position:absolute;top:50%;left:50%;margin-top:-32px;margin-left:-32px}
+.about-content{background:rgba(28,159,146,0.8);font-family:Cambria, Georgia, Paltino, 'Times New Roman', serif;letter-spacing:1px;color:#EEE;padding:15px 30px 30px}
+.about-content > h2{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:2.5px;padding:15px 0}
+#about-box{display:none;position:absolute;top:0;left:50%;margin-top:127px;margin-left:-400px;width:800px;background:rgba(29,159,146,0.5);z-index:101}
+#image-box > img{max-width:100%;max-height:460px}
+#help-box{display:none;position:absolute;width:80%;height:80%;top:10%;left:10%;z-index:100;overflow:auto;background:rgba(29,159,146,0.5)}
+.help-content{background:rgba(29,159,146,0.8);padding:10px 25px}
+.help-content p{color:#EEE;padding-top:15px;letter-spacing:1px;font-family:Cambria, Georgia, Paltino, 'Times New Roman', serif}
+.help-topic{color:#EEE;font-weight:700;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:2px}
+#help-box h3{font-weight:700;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:1.25px;padding-top:15px;color:#43342A}
+#help-box h2{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;letter-spacing:2.5px;color:#EEE;padding:15px 0}
+.how-to-item{float:left;width:25%}
+.how-to-item > .image-holder{padding:25px}
+.how-to-item > .image-holder > img{max-width:100%}
+#mobile-section-title,#desktop-section-title{font-weight:700;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;color:#43342A;letter-spacing:1.5px;text-decoration:none}
+#help-box ul > li > ul > li > a{color:#EEE;font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;text-decoration:none;display:block}
+#map_canvas{position:absolute;z-index:1}
+html,#tree-info-content{width:100%;height:100%}
+#main-menu > li,.p-trail,.map-options > h3,.map-options > p,.search-by-type > h3,.type-filter-title{display:inline-block}
+#mobile-menu > li:last-child,.scale-tick:last-child{margin-bottom:0}
+#search-triangle,.option-on,#help-box a:hover{background:rgba(255,255,255,0.3)}
+.intro-content > p,.about-content > p{margin-top:10px}
+.p-trail,.type-filter,#show-all,.tree-list > h3,.option-button{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif}
+@media only screen and (max-width: 768px) {
+header{position:fixed;margin-top:0;height:34px}
+#menu-show-hide{font-family:'Helvetica Neue Bold', Arimo, Arial, sans-serif;display:inline-block;cursor:pointer;letter-spacing:2px}
+header > h1{font-size:.7em;position:fixed;left:0;margin:10px 0 0 10px}
+footer{position:fixed;height:25px;background-position:top center}
+footer > p{color:#FFF;padding-top:10px;font-size:.5em}
+nav{display:none;position:static;background:#43342A;width:100%}
+#main-menu{display:block;margin-top:0;padding:5px 0}
+#map-controls{margin-right:25px;margin-top:63px;width:40px}
+.scale-tick{margin-left:12px}
+#about-box,#intro-box{left:0;margin-top:0;margin-left:0;width:100%;height:100%}
+.coral-title-stripe{height:34px;background:#ea6d55}
+.teal-title-stripe{height:34px;background:#22a193}
+.coral-info-mobile{background:rgba(234,109,85,0.8)}
+.teal-info-mobile{background:rgba(34,161,147,0.8)}
+#info-box{top:0;left:0;margin-top:0;margin-left:0;width:100%;height:100%;overflow:hidden;text-align:center}
+#tree-info-image{height:100%;width:100%;float:none;padding:0}
+#tree-info-image > img{max-width:100%}
+.tree-info-info{position:absolute;z-index:10;bottom:0;width:100%;margin-bottom:25px;box-shadow:0 0 5px #000;font-size:.5em;padding:10px}
+.clear-title-stripe{background:#ea6d55}
+.app-how-to{text-align:center}
+#header-background,#footer-image,#print-map,#search-trees,#find-me,#duplicate-s,#footer-stripe{display:none}
+#main-menu > li,#main-menu > li > a,.alphabet-search{display:block}
+.tree-list,.how-to-item{float:none;width:100%}
+#search-box,#help-box{width:100%;height:100%;top:0;left:0}
+}
+@media only screen and (min-width: 769px) {
+#mobile-menu{display:none}
+}

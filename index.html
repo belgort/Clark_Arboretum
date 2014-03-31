@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clark College Arboretum</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+	
+     <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="css/arboretum.css" />
+     <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script src="js/jquery-2.0.3.min.js"></script>
+     <script src="js/jquery.mousewheel.js"></script>
+     <script src="js/jquery.jscrollpane.min.js"></script>
+</head>
+
+
+<body>
+
+<!-- Notify people that JavaScript is necessary if its been turned off or disabled -->
+<noscript>
+     <div class="no-js">
+          <div class="no-js-content">
+               <h1>JAVASCRIPT IS DISABLED!</h1>
+               <h3>This website needs JavaScript to function</h3>
+               <h3>Please enable it and refresh the page to continue</h3>
+          </div>
+     </div>
+</noscript>
+
+<!-- Map gets put inside this div -->
+<div id="map_canvas"></div>
+
+<header>
+     <img id="header-background" src="img/header-stripe.png" alt="Header Stripe Image" />
+     <h1>CLARK COLLEGE | <span class="title-a">Arboretum</span></h1>
+     <h2 id="menu-show-hide">MENU &#x25BC;</h2>
+     <nav>
+          <ul id="main-menu">
+               <li><a id="about-link" class="menu-about" href="#" title="About this Project">ABOUT</a></li>
+               <li><a id="help-link" class="menu-help" href="#" title="Help Menu">HOW TO USE</a></li>
+               <li><a class="menu-college" href="http://clark.edu" title="Clark College Website">CLARK COLLEGE</a></li>
+          </ul>
+     </nav>
+     <ul id="mobile-menu">
+          <li><a id="m-menu-about" href="#">ABOUT</a></li>
+          <li><a id="m-menu-help" href="#">HOW TO USE</a></li>
+          <li><a id="m-menu-cc" href="http://clark.edu">CLARK COLLEGE</a></li>
+          <li><a id="m-search-trees" href="#">SEARCH TREES</a></li>
+          <li><a id="m-find-me" href="#">FIND MY LOCATION</a></li>
+     </ul>
+</header>
+
+<div id="search-trees"><p>SEARCH TREES</p><p id="search-triangle">&#9660;</p></div>
+
+<div class="on-map-buttons">
+     <p id="find-me"><span class="white-button-bg">FIND LOCATION</span></p>
+     <p id="print-map"><a id="print-link" href="http://ctec.clark.edu/~d.edenholm/cgt206/clark-arboretum/pdf/Clark-Arboretum-Map.pdf" title="Print the Clark College Arboretum Map">PRINTABLE MAP</a></p>
+</div>
+
+<div id="map-controls">
+     <div id="zoom-in">
+          <p>+</p>
+     </div>
+     <div id="zoom-scale">
+          <div class="scale-tick" id="zoom-20"></div>
+          <div class="scale-tick" id="zoom-19"></div>
+          <div class="scale-tick" id="zoom-18"></div>
+          <div class="scale-tick" id="zoom-17"></div>
+          <div class="scale-tick" id="zoom-16"></div>
+     </div>
+     <div id="zoom-out">
+          <p>-</p>
+     </div>
+</div>
+
+<div class="pop-up-box" id="info-box">
+     <div id="info-title-stripe" class="coral-title-stripe"><img class="close-item" src="img/close.png" alt="Close Window" /></div>
+     <div id="tree-info-content" class="cf">
+          <div id="tree-info-image">
+               <img src="img/trees/evergreen0.JPG" alt="Tree Photo" />
+          </div>
+          <div class="tree-info-info">
+               <h2 id="tree-info-title"></h2>
+               <h3 id="tree-info-genus"></h3>
+               <h3 id="tree-info-species"></h3>
+               <h3 id="tree-info-id"></h3>
+          </div>
+     </div>
+</div>
+
+<div class="pop-up-box" id="about-box">
+     <div class="teal-title-stripe"><img class="close-item" src="img/close.png" alt="Close Window" /></div>
+     <div class="about-content">
+          
+          <h2>ABOUT THE CLARK COLLEGE ARBORETUM</h2>
+          
+          <p>The Clark College Arboretum exists because of the vision and dedication of faculty and staff members of Clark College who recognized the value of connecting education to the natural beauty of the campus landscape at 1933 Fort Vancouver Way. The Arboretum owes much of its abundance to the work and dedication of former Biology Professor Anna Pechanec. It was under her direction and shovel that many of the tree species on campus were planted in the 1950s through the 1970s. The Arboretum now boasts over 120 distinct species, including a number of cultivated varieties.</p>
+          
+          <p>The Clark College Facilities Services Grounds Maintenance Department maintains our Arboretum.  Oversight of campus tree management is performed by the Campus Tree Advisory Committee according to guidelines established by the Arbor Day Foundation's Tree Campus USA Program, of which Clark College is a proud awardee.  The committee serves to provide guidance on issues such as:  campus tree health, opportunities to plant additional species and varieties, preserving existing trees in the face of growing needs for building expansion, as well as planning campus tree-related projects and celebrations.  Our goal is to preserve and expand the Clark College Arboretum for the benefit of all who find themselves on the campus today and for many years to come.</p>
+     </div>
+</div>
+
+<div class="pop-up-box" id="intro-box">
+     <div class="coral-title-stripe"><img id="close-intro-message" src="img/close.png" alt="Close Window" /></div>
+     <div class="intro-content">
+          
+          <h2 id="map-loading">MAP LOADING</h2>
+          
+          <h2>Welcome</h2>
+          
+          <p>Welcome to the Clark College Arboretum interactive map! From your desktop or mobile device, you can search through the trees growing on campus. Play with the map by zooming in and out and moving it around to get a better view of a certain area. Click on the tree markers to learn more about the individual trees. If you are physically on campus with your mobile device, make sure your device&#8217;s GPS is turned on, click &ldquo;find location&rdquo; from the menu link above, and you will see your location on the map.</p>
+ 
+          <p>Once you close this window, you can access this information via the &ldquo;How To Use&rdquo; link in the menu.</p>
+     </div>
+</div>
+
+<div class="pop-up-box" id="help-box">
+     <div class="teal-title-stripe"><img class="close-item" src="img/close.png" alt="Close Window" /></div>
+     <div class="help-content">
+          <h2>HOW TO USE THE MAP</h2>
+          <p>This interactive map is built for both desktop and mobile devices, although features and functionality may vary slightly.</p>
+          
+          <ul>
+               <li><a id="desktop-section-title" href="#desktop-help">DESKTOP FUNCTIONALITY</a>
+                    <ul> 
+                         <li><a href="#help-1">Map Interactivity</a></li>
+                         <li><a href="#help-2">Search</a></li>
+                         <li><a href="#help-3">Printable Map</a></li>
+                    </ul>
+               </li>
+               <li><a id="mobile-section-title" href="#mobile-help">MOBILE FUNCTIONALITY</a>
+                    <ul>
+                         <li><a href="#help-4">Menu</a></li>
+                         <li><a href="#help-5">Map Interactivity</a></li>
+                         <li><a href="#help-6">Search</a></li>
+                         <li><a href="#help-7">Printable Map</a></li>
+                         <li><a href="#help-8">Find Location</a></li>
+                         <li><a href="#help-9">Private Browsing</a></li>
+                    </ul>
+               </li>
+          </ul>
+
+          <h3 id="desktop-help">DESKTOP FUNCTIONALITY</h3>
+ 
+          <p><span class="help-topic" id="help-1">MAP INTERACTIVITY:</span> If you resize your browser window at any point, the map will not automatically adjust to fill the screen. Simply refresh your browser window and the map will adjust to the size of your browser window. Click on any of the tree markers on the map to learn more about that specific tree.</p>
+           
+          <p><span class="help-topic" id="help-2">SEARCH:</span> You may search through the trees by selecting the Search Trees button on the left side of the screen. You will have the ability to search by Evergreen or Deciduous tree type or common genus name. There are also options to select a Penguin Walking Path that you can follow to get a mini tour of campus while you explore the arboretum.</p>
+           
+          <p><span class="help-topic" id="help-3">PRINTABLE MAP:</span> Download and print a map to take with you to the campus.</p>
+           
+          <h3 id="mobile-help">MOBILE FUNCTIONALITY</h3>
+           
+          <p><span class="help-topic" id="help-4">MENU:</span> All links and search options can be accessed through the menu link in the upper right corner of the screen.</p>
+           
+          <p><span class="help-topic" id="help-5">MAP INTERACTIVITY:</span> Simply use your fingers to zoom in and out or move the map around. You can also use the zoom buttons located on the upper right corner of the map. Click on any of the tree markers on the map to learn more about that specific tree.</p>
+           
+          <p>If your device&#8217;s orientation changes , the map will not automatically adjust to fill the screen. Simply refresh your browser window and the map will adjust to the size of your browser window.</p>
+           
+          <p>If you are using the Safari browser on an Apple device, you might find that this interactive map is not as user-friendly as we would like it to be (although it will still work). Consider using the Google Chrome browser (available as a free download in the App Store) or simply save the site to your device&#8217;s home screen. Saving it to your home screen will allow it to function like an app.</p>
+
+          <div class="app-how-to">
+               <div class="how-to-item"><div class="image-holder">
+                    <img src="img/help-1.png" alt="Safari Address Bar Issue" />
+               </div></div>
+               <div class="how-to-item"><div class="image-holder">
+                    <img src="img/help-2.png" alt="Save the site to the Home Screen" />
+               </div></div>
+               <div class="how-to-item"><div class="image-holder">
+                    <img src="img/help-3.png" alt="Now you can launch it like an app" />
+               </div></div>
+               <div class="how-to-item"><div class="image-holder">
+                    <img src="img/help-4.png" alt="Runs full screen" />
+               </div></div>
+          </div>
+           
+          <p><span class="help-topic" id="help-6">SEARCH:</span> You may search through the trees by selecting the search trees button from the menu link in the upper right corner. You will have the ability to search by Evergreen or Deciduous tree type, or common genus name. There are also options to select a Penguin Walking Path that you can follow to get a mini tour of campus while you explore the arboretum.</p>
+           
+          <p><span class="help-topic" id="help-7">PRINTABLE MAP:</span> We&#8217;re sorry, but there is not printable map option available on the mobile version of this site.</p>
+           
+          <p><span class="help-topic" id="help-8">FIND LOCATION:</span> First, turn your device&#8217;s GPS settings on. This will allow your device&#8217;s location to be found and displayed on the map, enabling you to explore the trees near your exact location. When you move to a new location, simply select Find Location again, and your new location will be marked on the map.</p>
+          
+          <p><span class="help-topic" id="help-9">PRIVATE BROWSING:</span> If your browser has &ldquo;Private Browsing&rdquo; enabled, you will see the intro message every time you refresh the page.</p>
+          
+     </div>
+</div>
+
+
+<div class="pop-up-box" id="search-box">
+     <div class="clear-title-stripe"><img class="close-item" src="img/close.png" alt="Close Window" /></div>
+     
+     <div class="search-content cf">
+          <h2 class="search-main-titles">MAP OPTIONS</h2>
+          <div class="show-trails">
+               <h3 class="type-filter-title">SHOW A PENGUIN WALKING TRAIL:</h3>
+               <p><a id="blue-trail" href="#" class="p-trail" title="Show Humbolt Penguin Path">HUMBOLDT LOOP</a></p>
+               <p><a id="orange-trail" href="#" class="p-trail unavailable" title="Show Emperor Penguin Path">EMPEROR LOOP</a></p>
+               <p><a id="black-trail" href="#" class="p-trail unavailable" title="Show Rockhopper Penguin Path">ROCKHOPPER LOOP</a></p>
+               <p><a id="no-trail" href="#" class="p-trail option-on" title="No Penguin Path">NONE</a></p>
+          </div>
+          
+          <div class="map-options">
+               <h3>SATELLITE VIEW</h3>
+               <p><a href="#" class="option-button" id="overlay-on">ON</a></p>
+               <p><a href="#" class="option-button option-on" id="overlay-off">OFF</a></p>
+               <h3>TREE IDS</h3>
+               <p><a href="#" class="option-button" id="tree-ids-on">ON</a></p>
+               <p><a href="#" class="option-button option-on" id="tree-ids-off">OFF</a></p>
+          </div>
+          
+          <h2 class="search-main-titles">SEARCH OPTIONS</h2>
+     
+          <div class="search-by-type">
+               <h3>TREE TYPE</h3>
+               <p><a id="only-evergreen" href="e" class="type-filter" title="Show Only Evergreen Trees">EVERGREEN</a></p>
+               <p><a id="only-deciduous" href="d" class="type-filter" title="Show Only Deciduous Trees">DECIDUOUS</a></p>
+               <p><a id="show-all" href="All" title="Show All Trees">ALL TREES</a></p>
+          </div>
+          
+          <h3 id="genus-search-title">SEARCH BY COMMON GENUS</h3>
+          <div class="alphabet-search">
+               <a href="#a-trees">A</a>
+               <a href="#b-trees">B</a>
+               <a href="#c-trees">C</a>
+               <a href="#d-trees">D</a>
+               <a href="#e-trees">E</a>
+               <a href="#f-trees">F</a>
+               <a href="#g-trees">G</a>
+               <a href="#h-trees">H</a>
+               <!--<a href="#i-trees">I</a>-->
+               <a href="#j-trees">J</a>
+               <a href="#k-trees">K</a>
+               <a href="#l-trees">L</a>
+               <a href="#m-trees">M</a>
+               <!--<a href="#n-trees">N</a>-->
+               <a href="#o-trees">O</a>
+               <a href="#p-trees">P</a>
+               <!--<a href="#q-trees">Q</a>-->
+               <a href="#r-trees">R</a>
+               <a href="#s-trees">S</a>
+               <a href="#t-trees">T</a>
+               <!--<a href="#u-trees">U</a>-->
+               <!--<a href="#v-trees">V</a>-->
+               <a href="#w-trees">W</a>
+               <!--<a href="#x-trees">X</a>-->
+               <a href="#y-trees">Y</a>
+               <a href="#z-trees">Z</a>
+          </div>
+          <div class="tree-list">
+               <h3 id="a-trees">A</h3>
+               <p><a href="Arborvitae" title="Show All Arborvitae Trees" class="cg-filter">Arborvitae</a></p>
+               <p><a href="Ash" title="Show All Ash Trees" class="cg-filter">Ash</a></p>
+               <p><a href="Aspen" title="Show All Aspen Trees" class="cg-filter">Aspen</a></p>
+               <h3 id="b-trees">B</h3>
+               <p><a href="Beech" title="Show All Beech Trees" class="cg-filter">Beech</a></p>
+               <p><a href="Birch" title="Show All Birch Trees" class="cg-filter">Birch</a></p>
+               <h3 id="c-trees">C</h3>
+               <p><a href="Cascara" title="Show All Cascara Trees" class="cg-filter">Cascara</a></p>
+               <p><a href="Catalpa" title="Show All Catalpa Trees" class="cg-filter">Catalpa</a></p>
+               <p><a href="Cedar" title="Show All Cedar Trees" class="cg-filter">Cedar</a></p>
+               <p><a href="Coffeetree" title="Show All Coffeetree Trees" class="cg-filter">Coffeetree</a></p>
+               <p><a href="Crabapple" title="Show All Crabapple Trees" class="cg-filter">Crabapple</a></p>
+               <p><a href="Cryptomeria" title="Show All Cryptomeria Trees" class="cg-filter">Cryptomeria</a></p>
+               <p><a href="Cypress" title="Show All Cypress Trees" class="cg-filter">Cypress</a></p>
+          </div>
+          
+          <div class="tree-list">
+               <h3 id="d-trees">D</h3>
+               <p><a href="Dogwood" title="Show All Dogwood Trees" class="cg-filter">Dogwood</a></p>
+               <p><a href="DoveTree" title="Show All Dove Tree Trees" class="cg-filter">Dove Tree</a></p>
+               <h3 id="e-trees">E</h3>
+               <p><a href="Elm" title="Show All Elm Trees" class="cg-filter">Elm</a></p>
+               <h3 id="f-trees">F</h3>
+               <p><a href="Fig" title="Show All Fig Trees" class="cg-filter">Fig</a></p>
+               <p><a href="Fir" title="Show All Fir Trees" class="cg-filter">Fir</a></p>
+               <p><a href="FloweringCherry" title="Show All Flowering Cherry Trees" class="cg-filter">Flowering Cherry</a></p>                         
+               <h3 id="g-trees">G</h3>
+               <p><a href="Ginkgo" title="Show All Ginkgo Trees" class="cg-filter">Ginkgo</a></p>
+               <h3 id="h-trees">H</h3>
+               <p><a href="Hackberry" title="Show All Hackberry Trees" class="cg-filter">Hackberry</a></p>
+               <p><a href="Hawthorne" title="Show All Hawthorne Trees" class="cg-filter">Hawthorne</a></p>
+               <p><a href="Hemlock" title="Show All Hemlock Trees" class="cg-filter">Hemlock</a></p>
+               <p><a href="Horsechestnut" title="Show All Horsechestnut Trees" class="cg-filter">Horsechestnut</a></p>
+               <!--<h3 id="i-trees">I</h3>-->
+          </div>
+          
+          <div class="tree-list">
+               <h3 id="j-trees">J</h3>
+               <p><a href="Juniper" title="Show All Juniper Trees" class="cg-filter">Juniper</a></p>
+               <h3 id="k-trees">K</h3>
+               <p><a href="Katsura" title="Show All Katsura Trees" class="cg-filter">Katsura</a></p>
+               <h3 id="l-trees">L</h3>
+               <p><a href="Larch" title="Show All Larch Trees" class="cg-filter">Larch</a></p>
+               <p><a href="Linden" title="Show All Linden Trees" class="cg-filter">Linden</a></p>
+               <p><a href="Locust" title="Show All Locust Trees" class="cg-filter">Locust</a></p>
+               <h3 id="m-trees">M</h3>
+               <p><a href="Magnolia" title="Show All Magnolia Trees" class="cg-filter">Magnolia</a></p>
+               <p><a href="Maple" title="Show All Maple Trees" class="cg-filter">Maple</a></p>
+               <p><a href="Mimosa" title="Show All Mimosa Trees" class="cg-filter">Mimosa</a></p>
+               <p><a href="MonkeyPuzzle" title="Show All Monkey Puzzle Trees" class="cg-filter">Monkey Puzzle</a></p>
+               <!--<h3 id="n-trees">N</h3>-->
+               <h3 id="o-trees">O</h3>
+               <p><a href="Oak" title="Show All Oak Trees" class="cg-filter">Oak</a></p>
+               <p><a href="OsageOrange" title="Show All Osage Orange Trees" class="cg-filter">Osage Orange</a></p>
+          </div>
+          
+          <div class="tree-list">
+               <h3 id="p-trees">P</h3>
+               <p><a href="Parrotia" title="Show All Parrotia Trees" class="cg-filter">Parrotia</a></p>
+               <p><a href="Pear" title="Show All Pear Trees" class="cg-filter">Pear</a></p>
+               <p><a href="Pine" title="Show All Pine Trees" class="cg-filter">Pine</a></p>
+               <p><a href="Plum" title="Show All Plum Trees" class="cg-filter">Plum</a></p>
+               <!--<p><a href="Pomegranate" title="Show All Pomegranate Trees" class="cg-filter">Pomegranate</a></p> -->
+               <p><a href="Poplar" title="Show All Poplar Trees" class="cg-filter">Poplar</a></p>
+               <!--<h3 id="q-trees">Q</h3>-->
+               <h3 id="r-trees">R</h3>
+               <p><a href="Redbud" title="Show All Redbud Trees" class="cg-filter">Redbud</a></p>
+               <p><a href="Redwood" title="Show All Redwood Trees" class="cg-filter">Redwood</a></p>
+               <h3 id="s-trees">S</h3>
+               <p><a href="Sassafras" title="Show All Sassafras Trees" class="cg-filter">Sassafras</a></p>
+               <p><a href="Sequoia" title="Show All Sequoia Trees" class="cg-filter">Sequoia</a></p>
+               <p><a href="Sorrel" title="Show All Sorrel Trees" class="cg-filter">Sorrel</a></p>
+          </div>
+          
+          <div class="tree-list">
+               <h3 id="duplicate-s">S</h3>
+               <p><a href="Spruce" title="Show All Spruce Trees" class="cg-filter">Spruce</a></p>
+               <p><a href="Stewartia" title="Show All Stewartia Trees" class="cg-filter">Stewartia</a></p>
+               <p><a href="Styrax" title="Show All Styrax Trees" class="cg-filter">Styrax</a></p>
+               <p><a href="Sweetgum" title="Show All Sweetgum Trees" class="cg-filter">Sweetgum</a></p>
+               <p><a href="Sycamore" title="Show All Sycamore Trees" class="cg-filter">Sycamore</a></p>
+               <h3 id="t-trees">T</h3>
+               <p><a href="Tamarisk" title="Show All Tamarisk Trees" class="cg-filter">Tamarisk</a></p>
+               <p><a href="Tupelo" title="Show All Tupelo Trees" class="cg-filter">Tupelo</a></p>
+               <!--<h3 id="u-trees">U</h3>-->
+               <!--<h3 id="v-trees">V</h3>-->
+               <h3 id="w-trees">W</h3>
+               <p><a href="Willow" title="Show All Willow Trees" class="cg-filter">Willow</a></p>
+               <!--<h3 id="x-trees">X</h3>-->
+               <h3 id="y-trees">Y</h3>
+               <p><a href="Yew" title="Show All Yew Trees" class="cg-filter">Yew</a></p>                        
+               <h3 id="z-trees">Z</h3>
+               <p><a href="Zelkova" title="Show All Zelkova Trees" class="cg-filter">Zelkova</a></p>
+          </div> 
+     </div><!-- END search content -->  
+</div>
+
+<div id="footer-stripe"></div>
+<footer>
+     <p>Clark College Arboretum &copy; 2009 - 2013 | Map Data &copy; 2013 Google</p>
+</footer>
+     
+<script src="js/arboretum.min.js"></script>
+
+</body>
+</html>
