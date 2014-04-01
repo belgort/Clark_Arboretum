@@ -113,26 +113,45 @@ $(document).ready(function(){
      /* TO TEST NEW MAPS */
      /*************************************************************************/
      
-     /*  // <--- Remove the first slash and asterix to enable this section of code      
+       // <--- Remove the first slash and asterix to enable this section of code      
      // Overlay Full Image for testing
-	var imageBounds = new google.maps.LatLngBounds(
+	 // ORIGINAL FROM TEAM
+	/*var imageBounds = new google.maps.LatLngBounds(
          new google.maps.LatLng(45.631761,-122.661585),
-         new google.maps.LatLng(45.638885,-122.64770));
+         new google.maps.LatLng(45.638885,-122.64770)); */
+   
+   // NEW COORDS BRUCE ELGORT      
+   // SW
+   // NE
+   /*var imageBounds = new google.maps.LatLngBounds(
+         new google.maps.LatLng(45.631624,-122.660949),
+         new google.maps.LatLng(45.638885,-122.64770)); */
+      
+   // newest BE
+   /*
+   var imageBounds = new google.maps.LatLngBounds(
+         new google.maps.LatLng(45.631725,-122.660926),
+         new google.maps.LatLng(45.638885,-122.64770));   
+         
+         // -122.660926 45.631725 -122.64770 45.638885
+         
+   */   
          
      // Map Tiler Coordinates (N S E W): 45.638885 45.631761 -122.64770 -122.661585
-         
+    /*    
      var overlayOptions = {
-          opacity: 0.5
+          opacity: 0.7
      }
 		
 	var clarkMap = new google.maps.GroundOverlay(
           // Add URL of map overlay to test in the quotes below
-         '',
+         'img/test_map.png',
          imageBounds, overlayOptions);
      clarkMap.setMap(map);
      //*/
      
      /*************************************************************************/
+   
      
      // Map Styles - Sets the Background Google Map to hide all styles
      var styles = [ { "stylers": [ { "visibility": "off" } ] } ];
