@@ -242,8 +242,8 @@ $trees = array(
         'special'      => ''
 	),	
 	'evergreen13' => array(
-        'latitude'     => 45.6343833333333,
-        'longitude'    => -122.651,
+        'latitude'     => 45.634353,
+        'longitude'    => -122.650907,
         'icon'         => '',
         'imageLink'    => 'evergreen13.jpg',        
         'treeType'     => 'e',
@@ -1541,8 +1541,8 @@ $trees = array(
         'special'      => ''
 	),
 	'deciduous42' => array(
-        'latitude'     => 45.634762,
-        'longitude'    => -122.649903,
+        'latitude'     => 45.634765,
+        'longitude'    => -122.649917,
         'icon'         => '',
         'imageLink'    => 'deciduous42.JPG',
         'treeType'     => 'd',
