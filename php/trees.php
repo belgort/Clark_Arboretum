@@ -354,7 +354,7 @@ $trees = array(
         'cultivar'     => 'Elegans',
         'commonName'   => 'Elegans Japanese Cedar',
         'special'      => ''
-	),	
+	),	/* Updated 2/22/15 name correction - CW */
 	'evergreen20' => array(
         'latitude'     => 45.634789,
         'longitude'    => -122.654365,
@@ -367,10 +367,10 @@ $trees = array(
         'commonGenus'  => 'Cryptomeria',
         'genus'        => 'Cryptomeria',
         'species'      => 'japonica',
-        'cultivar'     => 'Sekkan sugi',
+        'cultivar'     => 'Sekkan-sugi',
         'commonName'   => 'Sekkan-Sugi Japanese Cedar',
         'special'      => ''
-	),
+	), /* Updated 2/22/15, per Tim's request tree was removed because it died - CW
 	'evergreen21' => array(
         'latitude'     => 45.634764,
         'longitude'    => -122.651033,
@@ -386,7 +386,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Leyland Cypress',
         'special'      => ''
-	),	
+	),	*/
 	'evergreen22' => array(
         'latitude'     => 45.634304,
         'longitude'    => -122.65038,
@@ -867,7 +867,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Western Hemlock',
                 'special'      => ''
-	),
+	), /* Updated 2/22/15, name change -CW */
 	'evergreen52' => array(
         'latitude'     => 45.634365,
         'longitude'    => -122.654163,
@@ -880,8 +880,8 @@ $trees = array(
         'commonGenus'  => 'Magnolia',
         'genus'        => 'Magnolia',
         'species'      => 'grandiflora',
-        'cultivar'     => 'Victoria',
-        'commonName'   => 'Victoria Southern Magnolia',
+        'cultivar'     => 'Edith Bogue',
+        'commonName'   => 'Southern Magnolia',
         'special'      => ''
 	),
 	'deciduous1' => array(
@@ -947,7 +947,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Amur Maple',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name correction - CW */
 	'deciduous5' => array(
         'latitude'     => 45.634383,
         'longitude'    => -122.650349,
@@ -961,7 +961,7 @@ $trees = array(
         'genus'        => 'Acer',
         'species'      => 'griseum',
         'cultivar'     => '',
-        'commonName'   => 'Paperback Maple',
+        'commonName'   => 'Paperbark Maple',
         'special'      => ''
 	),
 	'deciduous6' => array(
@@ -979,7 +979,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Bigleaf Maple',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name correction - CW */
 	'deciduous7' => array(
         'latitude'     => 45.6336666666666,
         'longitude'    => -122.649833333333,
@@ -992,7 +992,7 @@ $trees = array(
         'commonGenus'  => 'Maple',
         'genus'        => 'Acer',
         'species'      => 'negundo',
-        'cultivar'     => 'variegata',
+        'cultivar'     => 'Variegata',
         'commonName'   => 'Variegated Box Elder',
         'special'      => ''
 	), /*
@@ -1107,7 +1107,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Sugar Maple',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name correction - CW */
 	'deciduous15' => array(
         'latitude'     => 45.634104,
         'longitude'    => -122.650101,
@@ -1120,7 +1120,7 @@ $trees = array(
         'commonGenus'  => 'Maple',
         'genus'        => 'Acer',
         'species'      => 'pictum',
-        'cultivar'     => 'mono',
+        'cultivar'     => 'Mono',
         'commonName'   => 'Painted Maple',
         'special'      => ''
 	),
@@ -1347,7 +1347,7 @@ $trees = array(
         'cultivar'     => 'Emer II',
         'commonName'   => 'Allee Elm',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name correction - CW */
 	'deciduous30' => array(
         'latitude'     => 45.6335666666666,
         'longitude'    => -122.6536,
@@ -1360,8 +1360,8 @@ $trees = array(
         'commonGenus'  => 'Beech',
         'genus'        => 'Fagus',
         'species'      => 'sylvatica',
-        'cultivar'     => 'Purperea',
-        'commonName'   => 'Purple European Beech',
+        'cultivar'     => 'Purpurea',
+        'commonName'   => 'European Purple Beech',
         'special'      => ''
 	),
 	'deciduous31' => array(
@@ -1507,7 +1507,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Western Larch',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name correction - CW */
 	'deciduous40' => array(
         'latitude'     => 45.634381,
         'longitude'    => -122.65015,
@@ -1518,7 +1518,7 @@ $trees = array(
         'latinFamily'  => 'Hamamelidaceae',
         'commonFamily' => 'Witch Hazel',
         'commonGenus'  => 'Sweetgum',
-        'genus'        => 'Liquidamber',
+        'genus'        => 'Liquidambar',
         'species'      => 'styraciflua',
         'cultivar'     => '',
         'commonName'   => 'American Sweetgum',
@@ -1619,7 +1619,7 @@ $trees = array(
         'cultivar'     => '',
         'commonName'   => 'Sorrel Tree',
         'special'      => ''
-	),
+	), /* Updated 2/22/15 name change per Tim's request - CW */
 	'deciduous47' => array(
         'latitude'     => 45.6361333333333,
         'longitude'    => -122.652416666666,
@@ -1633,7 +1633,7 @@ $trees = array(
         'genus'        => 'Parrotia',
         'species'      => 'persica',
         'cultivar'     => '',
-        'commonName'   => 'Parrotia',
+        'commonName'   => 'Persian Ironwood',
         'special'      => ''
 	),
 	'deciduous48' => array(
