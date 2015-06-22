@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
      var canvas  = $('#map_canvas');
      
@@ -9,9 +9,9 @@ $(document).ready(function(){
      var loadingInterval = 0;
      
      // Find out if the browser has already shown the intro box
-     if ( typeof(sessionStorage) !== "undefined" )
+     if (typeof(sessionStorage) !== "undefined")
      {
-          if ( sessionStorage.arboretumIntro ) {
+          if (sessionStorage.arboretumIntro) {
                intro = false;
           }
      }
